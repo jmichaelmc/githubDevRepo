@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!-- THIS MAPPING FILE IS NOT BEING USED -->
+
+<hibernate-mapping package="org.course.db.domain">
+
+	<class name="Users" table="USERS">
+		<id name="id" column="ID">
+			<generator class="native"/>
+		</id>
+		<property name="username"/>
+		<property name="firstname"/>
+		<property name="lastname"/>
+	</class>
+
+	<class name="Courses" table="COURSES">
+		<id name="crn" column="CRN">
+			<!-- <generator class="native"/> -->
+		</id>
+		<property name="subject"/>
+		<property name="course"/>
+		<property name="section"/>
+		<property name="credits"/>
+		<property name="title"/>
+		<property name="instructor"/>
+	</class>
+
+</hibernate-mapping>

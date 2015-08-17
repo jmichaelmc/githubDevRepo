@@ -1,0 +1,35 @@
+<!DOCTYPE hibernate-configuration SYSTEM
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.dialect">
+			org.hibernate.dialect.MySQLDialect
+		</property>
+		<property name="hibernate.connection.driver_class">
+	      com.mysql.jdbc.Driver
+	   </property>
+
+   <!-- Assume test is the database name -->
+   <property name="hibernate.connection.url">
+   	  jdbc:mysql://devrdsinstance.ckkmhzhtyehi.us-west-2.rds.amazonaws.com:3306
+      <!-- jdbc:mysql://localhost/school -->
+   </property>
+   <property name="hibernate.connection.username">
+      root
+   </property>
+   <property name="hibernate.connection.password">
+      password
+   </property>
+
+   <!-- List of XML mapping files
+   <mapping resource="src/main/resources/hibernate.hbm.xml"/>
+   -->
+   
+   <!-- List of annotated classes -->
+   <mapping class="org.course.db.domain.Address" />
+   <mapping class="org.course.db.domain.Course" />
+   <mapping class="org.course.db.domain.User" />
+   
+	</session-factory>
+</hibernate-configuration>
